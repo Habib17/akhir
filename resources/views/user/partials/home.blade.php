@@ -14,30 +14,15 @@
 						
 						<div class="carousel-inner">
 							<div class="item active">
-								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free E-Commerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="{{ URL::asset('assets/images/home/girl1.jpg') }}
+								<div class="col-sm-12">
+									<img src="{{ URL::asset('assets/images/home/goldia1.jpg') }}
 									" class="girl img-responsive" alt="" />
-									<img src="{{ URL::asset('assets/images/home/pricing.png') }}"  class="pricing" alt="" />
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>100% Responsive Design</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="{{ URL::asset('assets/images/home/girl2.jpg') }}
+								<div class="col-sm-12">
+									<img src="{{ URL::asset('assets/images/home/goldia2.jpg') }}
 									" class="girl img-responsive" alt="" />
-									<img src="{{ URL::asset('assets/images/home/pricing.png') }}
-									"  class="pricing" alt="" />
 								</div>
 							</div>
 							
@@ -810,9 +795,9 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="#" ><i class="fa fa-user"></i> Account</a></li>
                                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                <li><a href="{{ URL::asset('/checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="{{ URL::asset('/cart') }}" ><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <li><a href="{{ URL::asset('/account') }}"><i class="fa fa-lock"></i> Login</a></li>
+                                <li><a href="{{ URL::asset('user/checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                                <li><a href="{{ URL::asset('user/cart') }}" ><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                <li><a href="{{ URL::asset('user/account') }}"><i class="fa fa-lock"></i> Login</a></li>
                             </ul>
                         </div>
                     </div>
@@ -834,14 +819,14 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="{{ URL::asset('/') }}" class="active">Home</a></li>
+                                <li><a href="{{ URL::asset('user/') }}" class="active">Home</a></li>
                                 <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
-                                        <li><a href="{{ URL::asset('/detail') }}">Product Details</a></li> 
-                                        <li><a href="{{ URL::asset('/checkout') }}"  >Checkout</a></li> 
-                                        <li><a href="{{ URL::asset('/cart') }}">Cart</a></li> 
-                                        <li><a href="{{ URL::asset('/account') }}">Login</a></li> 
+                                        <li><a href="{{ URL::asset('user/detail') }}">Product Details</a></li> 
+                                        <li><a href="{{ URL::asset('user/checkout') }}"  >Checkout</a></li> 
+                                        <li><a href="{{ URL::asset('user/cart') }}">Cart</a></li> 
+                                        <li><a href="{{ URL::asset('user/account') }}">Login</a></li> 
                                     </ul>
                                 </li> 
 
@@ -857,7 +842,7 @@
                                     </ul>
                                 </li> 
                                 <li><a href="404.html">404</a></li>
-                                <li><a href="{{ URL::asset('/contact') }}">Contact</a></li>
+                                <li><a href="{{ URL::asset('user/contact') }}">Contact</a></li>
                             </ul>
                         </div>
                     </div>

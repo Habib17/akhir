@@ -24,40 +24,41 @@
  <section class="content">
           <div class="row">
             <div class="col-xs-12">
-  <div class="box">
-                <div class="box-header">
-                  <h3 class="box-title">Data Table With Full Features</h3>
-                  <a href=" {{ URL::asset('admin/orderitem/create') }}" class="btn btn-success pull-right"><i class="fa fa-fw fa-plus" ></i>Tambah</a>
+               <div class="box box-info">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Horizontal Form</h3>
                 </div><!-- /.box-header -->
-                  <div class="box-body">
-                  <table id="example1" class="table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>Id</th>
-                        <th>Orders Id</th>
-                        <th>Product Id</th>
-                        <th>Price</th>
-                        <th>Qty</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-            <tbody>
-           @foreach($orderitem as $key => $value)
-        <tr>
-            <td>{{ $value->id }}</td>
-            <td>{{ $value->order_id }}</td>
-            <td>{{ $value->product_id }}</td>
-            <td>{{ $value->price }}</td>
-            <td>{{ $value->qty }}</td>
-            <td>
-   <a href="#" class="btn btn-small btn-info">Edit</a>| <a href="#" class="btn btn-small btn-danger">Hapus</a>
-
-            </td>
-        </tr>
-    @endforeach
-                    </tbody>
-                  </table>
+                <!-- form start -->
+  <form class="form-horizontal"  method="post">
+    @if (count($errors) > 0) 
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+            <div class="box-body">
+                <div class="form-group">
+                    <label  class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input class="form-control" name="email"  type="text" placeholder="Email" >
+                </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-sm-2 control-label">Token</label>
+                <div class="col-sm-10">
+                    <input class="form-control" name="token"  type="text" placeholder="token" >
+                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                </div>
+                </div>
                 </div><!-- /.box-body -->
+                  <div class="box-footer">
+                    <button type="submit" class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-success pull-right">Save</button>
+                  </div><!-- /.box-footer -->
+                </form>
               </div><!-- /.box -->
               </div><!-- /.col -->
           </div><!-- /.row -->
@@ -90,21 +91,11 @@
         </form>
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
-         <ul class="sidebar-menu">
+        <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-           <li>
+           <li class="active">
                 <a href="{{ URL::asset('/widget') }}">
                      <i class="fa fa-dashboard"></i> <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ URL::asset('admin/category') }}">
-                     <i class="fa fa-book"></i> <span>Category</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ URL::asset('admin/orders') }}">
-                     <i class="fa fa-hand-paper-o"></i> <span>Orders</span>
                 </a>
             </li>
         </ul>

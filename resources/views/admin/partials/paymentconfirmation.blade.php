@@ -24,34 +24,43 @@
  <section class="content">
           <div class="row">
             <div class="col-xs-12">
-  <div class="box">
+<div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Data Table With Full Features</h3>
-                  <a href=" {{ URL::asset('admin/orderitem/create') }}" class="btn btn-success pull-right"><i class="fa fa-fw fa-plus" ></i>Tambah</a>
+                  <a href=" {{ URL::asset('admin/paymentconfirmation/create') }}" class="btn btn-success pull-right"><i class="fa fa-fw fa-plus" ></i>Tambah</a>
                 </div><!-- /.box-header -->
-                  <div class="box-body">
+                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th>Id</th>
-                        <th>Orders Id</th>
-                        <th>Product Id</th>
-                        <th>Price</th>
-                        <th>Qty</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-            <tbody>
-           @foreach($orderitem as $key => $value)
-        <tr>
-            <td>{{ $value->id }}</td>
-            <td>{{ $value->order_id }}</td>
-            <td>{{ $value->product_id }}</td>
-            <td>{{ $value->price }}</td>
-            <td>{{ $value->qty }}</td>
-            <td>
-   <a href="#" class="btn btn-small btn-info">Edit</a>| <a href="#" class="btn btn-small btn-danger">Hapus</a>
+                       <th>ID</th>
+                       <th>Name</th>
+                        <th>Bank</th>
+                        <th>Nominal</th>
+                        <th>Send At</th>
+                        <th>Code</th>
+                        <th>Bank Account</th>            
 
+                    
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($paymentconfirmation as $key => $value)
+        <tr>
+          <td>{{ $value->id }}</td>
+          <td>{{ $value->name }}</td>
+        <td>{{ $value->bank }}</td>
+        <td>{{ $value->nominal }}</td>
+        <td>{{ $value->send_at }}</td>
+        <td>{{ $value->code }}</td>
+        <td>{{ $value->bank_account }}</td>
+
+   
+
+            <!-- we will also add show, edit, and delete buttons -->
+            <td>
+              <a href="#" class="btn btn-small btn-info">Edit</a>| <a href="#" class="btn btn-small btn-danger">Hapus</a>
             </td>
         </tr>
     @endforeach
@@ -90,7 +99,7 @@
         </form>
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
-         <ul class="sidebar-menu">
+        <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
            <li>
                 <a href="{{ URL::asset('/widget') }}">

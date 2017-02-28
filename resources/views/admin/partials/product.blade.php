@@ -27,19 +27,20 @@
 <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Data Table With Full Features</h3>
+                  <a href=" {{ URL::asset('admin/product/create') }}" class="btn btn-success pull-right"><i class="fa fa-fw fa-plus" ></i>Tambah</a>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                  <table id="example1" class="table table-bordered table-striped">
+                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                       <th>ID</th>
-                        <th>NAME</th>
-                        <th>DESKRIPTION</th>
-                        <th>CODE</th>
-                        <th>PRICE</th>
-                        <th>CATEGORY_ID</th>
-                        <th>QTY</th>
-                        <th>ACTION</th>
+                       <th>Id</th>
+                        <th>Name</th>
+                        <th>Deskription</th>
+                        <th>Code</th>
+                        <th>Price</th>
+                        <th>Category Id</th>
+                        <th>Qty</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -52,18 +53,8 @@
             <td>{{ $value->price }}</td>
             <td>{{ $value->category_id }}</td>
              <td>{{ $value->qty }}</td>
-
-            <!-- we will also add show, edit, and delete buttons -->
             <td>
-
-                <!-- delete the nerd (uses the destroy method DESTROY /nerds/{id} -->
-                <!-- we will add this later since its a little more complicated than the other two buttons -->
-
-                <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
-                <a class="btn btn-small btn-success" href="{{ URL::to('nerds/' . $value->id) }}">Show this Nerd</a>
-
-                <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
-                <a class="btn btn-small btn-info" href="{{ URL::to('nerds/' . $value->id . '/edit') }}">Edit this Nerd</a>
+                <a href="#" class="btn btn-small btn-info">Edit</a>| <a href="#" class="btn btn-small btn-danger">Hapus</a>
 
             </td>
         </tr>
@@ -106,9 +97,19 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-           <li class="active">
+           <li>
                 <a href="{{ URL::asset('/widget') }}">
                      <i class="fa fa-dashboard"></i> <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ URL::asset('admin/category') }}">
+                     <i class="fa fa-book"></i> <span>Category</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ URL::asset('admin/orders') }}">
+                     <i class="fa fa-hand-paper-o"></i> <span>Orders</span>
                 </a>
             </li>
         </ul>

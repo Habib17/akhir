@@ -1,9 +1,7 @@
 <?php 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\Product;
-use App\Models\Category;
 use Validator;
 use Redirect;
 use Session;
@@ -18,27 +16,33 @@ class ProductController extends Controller
 
     public function create()
     {
-        return view('crud.create');
+        return view('admin.partials.product-create');
     }
 
     public function store(Request $request)
     {
     	$rules = array(
             'name'       => 'required',
-            'parent_id'      => 'required',
-            'slug'      => 'required',
+            'deskription'      => 'required',
+            'code'      => 'required',
+            'category_id'      => 'required',
+            'price'      => 'required',
+            'qty'      => 'required',
         );
 
         $this->validate($request, $rules);
 
-		$category = new Category;
-		$category->name = $request->input('name');
-		$category->parent_id = $request->input('parent_id');
-		$category->slug = $request->input('slug');
-		$category->save();
+		$product = new Product;
+		$product->name = $request->input('name');
+		$product->deskription = $request->input('deskription');
+		$product->code = $request->input('code');
+        $product->category_id = $request->input('category_id');
+        $product->price = $request->input('price');
+        $product->qty = $request->input('qty');
+		$product->save();
 
         // redirect
         Session::flash('message', 'Successfully created nerd!');
-        return Redirect::to('admin/product/create');
+        return Redirect::to('admin/product');
     }
 }

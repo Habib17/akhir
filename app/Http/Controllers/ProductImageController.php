@@ -1,12 +1,14 @@
 <?php 
 namespace App\Http\Controllers;
-use App\Http\Requests;
-use Illuminate\Routing\Controller as BaseController;
-
+use Illuminate\Http\Request;
 use App\Models\ProductImage;
+use Validator;
+use Redirect;
+use Session;
 
 
-class ProductImageController extends BaseController
+
+class ProductImageController extends Controller
 {
     public function index(){
         
@@ -15,7 +17,28 @@ class ProductImageController extends BaseController
         return view('admin.partials.productimage')
             ->with('productimage', $productimage);
     }  
-  
+     public function create()
+    {
+        return view('admin.partials.productimage-create');
+    }
+  	public function store(Request $request)
+    {
+    	$rules = array(
+            'product_id'       => 'required',
+            'image'      => 'required',
+        );
+
+        $this->validate($request, $rules);
+
+		$productimage = new Productimage;
+		$productimage->product_id = $request->input('product_id');
+		$productimage->image = $request->input('image');
+		$productimage->save();
+
+        // redirect
+        Session::flash('message', 'Successfully created nerd!');
+        return Redirect::to('admin/productimage');
+    }
 
     
 }

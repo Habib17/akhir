@@ -7,9 +7,6 @@ use Validator;
 use Redirect;
 use Session;
 
-
-
-
 class CategoryController extends Controller
 {
     public function index(){

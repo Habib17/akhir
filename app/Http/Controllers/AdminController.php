@@ -16,7 +16,13 @@ class AdminController extends BaseController
           // return view('user.partials.home');
            return view('admin.admin');
     }  
+     public function contoh(){
+          // return view('user.partials.home');
+           return view('admin.partials.contoh-category-create
+');
+    }  
 
+    
     // public function account(){
     //       return view('user.partials.account');
     // }
