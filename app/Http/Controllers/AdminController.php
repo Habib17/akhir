@@ -18,7 +18,7 @@ class AdminController extends BaseController
     }  
      public function contoh(){
           // return view('user.partials.home');
-           return view('admin.partials.contoh-category-create
+           return view('admin.partials.oke
 ');
     }  
 

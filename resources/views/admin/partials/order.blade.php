@@ -1,25 +1,4 @@
-@extends('admin.layouts.master-home')
-@section('css')
-<link rel="stylesheet" href="{{ URL::asset('assets/admin/bootstrap/css/bootstrap.min.css') }}">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- DataTables -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/admin/plugins/datatables/dataTables.bootstrap.css') }}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/admin/dist/css/AdminLTE.min.css') }}">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/admin/dist/css/skins/_all-skins.min.css') }}">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-@endsection
+@extends('admin.layouts.master')
 @section('content')
  <section class="content">
           <div class="row">
@@ -41,7 +20,7 @@
                     </tr>
                     </thead>
                     <tbody>
-            @foreach($order as $key => $value)
+            @foreach($orders as $key => $value)
         <tr>
           <td>{{ $value->id }}</td>
           <td>{{ $value->name }}</td>
@@ -49,7 +28,7 @@
           <td>{{ $value->order_at }}</td>
           <td>
 
-            <a href="#" class="btn btn-small btn-info">Edit</a>| <a href="#" class="btn btn-small btn-danger">Hapus</a>
+            <a href="{{ URL::asset('admin/orders/edit/'. $value->id) }}" class="btn btn-small btn-info">Edit</a>| <a href="{{ URL::asset('admin/orders/confirm/'. $value->id) }}" class="btn btn-small btn-danger">Hapus</a>
           </td>
         </tr>
     @endforeach

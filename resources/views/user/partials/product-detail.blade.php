@@ -7,14 +7,14 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="left-sidebar">
-                        <h2>Category</h2>
+                        <h2>Kategori</h2>
                         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
                                             <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Sportswear
+                                            Kripik Buah
                                         </a>
                                     </h4>
                                 </div>
@@ -35,7 +35,7 @@
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordian" href="#mens">
                                             <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Mens
+                                            Kripik Tempe
                                         </a>
                                     </h4>
                                 </div>
@@ -62,7 +62,7 @@
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordian" href="#womens">
                                             <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Womens
+                                            Krupuk
                                         </a>
                                     </h4>
                                 </div>
@@ -80,52 +80,58 @@
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Kids</a></h4>
+                                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordian" href="#manisanbuah">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            Manisan Buah
+                                        </a></h4>
+                                </div>
+                                <div id="manisanbuah" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li><a href="">Jambu</a></li>
+                                            <li><a href="">Apel</a></li>
+                                            <li><a href="">Melon</a></li>
+                                            <li><a href="">Jeruk</a></li>
+                                            <li><a href="">Versace</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Fashion</a></h4>
+                                    <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordian" href="#minumanbuah">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            Minuman Sari Buah
+                                        </a>
+                                    </h4>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Households</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Interiors</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Clothing</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Bags</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Shoes</a></h4>
+                                 <div id="minumanbuah" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li><a href="">Apel</a></li>
+                                            <li><a href="">Melon</a></li>
+                                            <li><a href="">Jeruk</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div><!--/category-products-->
                     
                         <div class="brands_products"><!--brands_products-->
-                            <h2>Brands</h2>
+                            <h2>Produk Unggulan</h2>
                             <div class="brands-name">
                                 <ul class="nav nav-pills nav-stacked">
-                                    <li><a href=""> <span class="pull-right">(50)</span>Acne</a></li>
-                                    <li><a href=""> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                                    <li><a href=""> <span class="pull-right">(27)</span>Albiro</a></li>
-                                    <li><a href=""> <span class="pull-right">(32)</span>Ronhill</a></li>
-                                    <li><a href=""> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                                    <li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                                    <li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+                                    <li><a href=""> Plintir Istimewa</a></li>
+                                    <li><a href=""> Kacang Sembunyi Manis</a></li>
+                                    <li><a href=""> Pastel Mini</a></li>
+                                    <li><a href=""> Kue Bagelan</a></li>
+                                    <li><a href=""> Kripik Tempe Varian Rasa</a></li>
+                                    <li><a href=""> Amplang</a></li>
+                                    <li><a href=""> Telo Ungu</a></li>
+                                    <li><a href=""> Keripik Kentang</a></li>
+                                    <li><a href=""> Opak Gambir</a></li>
+                                    <li><a href=""> Aneka Kripik Buah</a></li>
                                 </ul>
                             </div>
                         </div><!--/brands_products-->
@@ -138,9 +144,7 @@
                             </div>
                         </div><!--/price-range-->
                         
-                        <div class="shipping text-center"><!--shipping-->
-                            <img src="{{ URL::asset('assets/images/home/shipping.jpg') }}" alt="" />
-                        </div><!--/shipping-->
+                       <!--/shipping-->
                         
                     </div>
                 </div>
@@ -149,47 +153,17 @@
                     <div class="product-details"><!--product-details-->
                         <div class="col-sm-5">
                             <div class="view-product">
-                                <img src="{{ URL::asset('assets/images/product-details/1.jpg') }}" alt="" />
-                                <h3>ZOOM</h3>
+                                <img src="{{ URL::asset('assets/images/product-details/GPI_01D.jpg') }}" alt="" />
                             </div>
-                            <div id="similar-product" class="carousel slide" data-ride="carousel">
-                                
-                                  <!-- Wrapper for slides -->
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                          <a href=""><img src="{{ URL::asset('assets/images/product-details/similar1.jpg') }}" alt=""></a>
-                                          <a href=""><img src="{{ URL::asset('assets/images/product-details/similar2.jpg') }}" alt=""></a>
-                                          <a href=""><img src="{{ URL::asset('assets/images/product-details/similar3.jpg') }}" alt=""></a>
-                                        </div>
-                                        <div class="item">
-                                          <a href=""><img src="{{ URL::asset('assets/images/product-details/similar1.jpg') }}" alt=""></a>
-                                          <a href=""><img src="{{ URL::asset('assets/images/product-details/similar2.jpg') }}" alt=""></a>
-                                          <a href=""><img src="{{ URL::asset('assets/images/product-details/similar3.jpg') }}" alt=""></a>
-                                        </div>
-                                        <div class="item">
-                                          <a href=""><img src="{{ URL::asset('assets/images/product-details/similar1.jpg') }}" alt=""></a>
-                                          <a href=""><img src="{{ URL::asset('assets/images/product-details/similar2.jpg') }}" alt=""></a>
-                                          <a href=""><img src="{{ URL::asset('assets/images/product-details/similar3.jpg') }}" alt=""></a>
-                                        </div>
-                                        
-                                    </div>
+                     <!--       similiar product -->
 
-                                  <!-- Controls -->
-                                  <a class="left item-control" href="#similar-product" data-slide="prev">
-                                    <i class="fa fa-angle-left"></i>
-                                  </a>
-                                  <a class="right item-control" href="#similar-product" data-slide="next">
-                                    <i class="fa fa-angle-right"></i>
-                                  </a>
-                            </div>
 
                         </div>
                         <div class="col-sm-7">
                             <div class="product-information"><!--/product-information-->
-                                <img src="{{ URL::asset('assets/images/product-details/new.jpg') }}" class="newarrival" alt="" />
+                              <!--   new  -->
                                 <h2>Anne Klein Sleeveless Colorblock Scuba</h2>
                                 <p>Web ID: 1089772</p>
-                                <img src="{{ URL::asset('assets/images/product-details/rating.png') }}" alt="" />
                                 <span>
                                     <span>US $59</span>
                                     <label>Quantity:</label>
@@ -202,202 +176,12 @@
                                 <p><b>Availability:</b> In Stock</p>
                                 <p><b>Condition:</b> New</p>
                                 <p><b>Brand:</b> E-SHOPPER</p>
-                                <a href=""><img src="{{ URL::asset('assets/images/product-details/share.png') }}" class="share img-responsive"  alt="" /></a>
                             </div><!--/product-information-->
                         </div>
                     </div><!--/product-details-->
                     
-                    <div class="category-tab shop-details-tab"><!--category-tab-->
-                        <div class="col-sm-12">
-                            <ul class="nav nav-tabs">
-                                <li><a href="#details" data-toggle="tab">Details</a></li>
-                                <li><a href="#companyprofile" data-toggle="tab">Company Profile</a></li>
-                                <li><a href="#tag" data-toggle="tab">Tag</a></li>
-                                <li class="active"><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
-                            </ul>
-                        </div>
-                        <div class="tab-content">
-                            <div class="tab-pane fade" id="details" >
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery1.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery2.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery3.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery4.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="tab-pane fade" id="companyprofile" >
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery1.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery3.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery2.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery4.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="tab-pane fade" id="tag" >
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery1.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery2.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery3.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="{{ URL::asset('assets/images/home/gallery4.jpg') }}" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="tab-pane fade active in" id="reviews" >
-                                <div class="col-sm-12">
-                                    <ul>
-                                        <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
-                                        <li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
-                                        <li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    <p><b>Write Your Review</b></p>
-                                    
-                                    <form action="#">
-                                        <span>
-                                            <input type="text" placeholder="Your Name"/>
-                                            <input type="email" placeholder="Email Address"/>
-                                        </span>
-                                        <textarea name="" ></textarea>
-                                        <b>Rating: </b> <img src="{{ URL::asset('assets/images/product-details/rating.png') }}" alt="" />
-                                        <button type="button" class="btn btn-default pull-right">
-                                            Submit
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div><!--/category-tab-->
                     
-                    <div class="recommended_items"><!--recommended_items-->
+                  <div class="recommended_items"><!--recommended_items-->
                         <h2 class="title text-center">recommended items</h2>
                         
                         <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
@@ -407,10 +191,12 @@
                                         <div class="product-image-wrapper">
                                             <div class="single-products">
                                                 <div class="productinfo text-center">
-                                                    <img src="{{ URL::asset('assets/images/home/recommend1.jpg') }}" alt="" />
+                                                    <img src="{{ URL::asset('assets/images/home/GKT_01.jpg') }}" alt="" />
                                                     <h2>$56</h2>
                                                     <p>Easy Polo Black Edition</p>
-                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</button>
+                                                    <a href="{{ URL::asset('user/detail') }}"><button  type="button" class="btn btn-default add-to-cart"
+                                                    ><i class="fa fa fa-plus-square"></i>Detail</button></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -419,10 +205,13 @@
                                         <div class="product-image-wrapper">
                                             <div class="single-products">
                                                 <div class="productinfo text-center">
-                                                    <img src="{{ URL::asset('assets/images/home/recommend2.jpg') }}" alt="" />
+                                                    <img src="{{ URL::asset('assets/images/home/GPI_01.jpg') }}" alt="" />
                                                     <h2>$56</h2>
                                                     <p>Easy Polo Black Edition</p>
-                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</button>
+                                                    <a href="{{ URL::asset('user/detail') }}">
+                                                     <button type="button" class="btn btn-default add-to-cart"><i class="fa fa fa-plus-square"></i>Detail</button>
+                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -431,10 +220,13 @@
                                         <div class="product-image-wrapper">
                                             <div class="single-products">
                                                 <div class="productinfo text-center">
-                                                    <img src="{{ URL::asset('assets/images/home/recommend3.jpg') }}" alt="" />
+                                                    <img src="{{ URL::asset('assets/images/home/MSBK_01.jpg') }}" alt="" />
                                                     <h2>$56</h2>
                                                     <p>Easy Polo Black Edition</p>
-                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</button>
+                                                    <a href="{{ URL::asset('user/detail') }}">
+                                                     <button type="button" class="btn btn-default add-to-cart"><i class="fa fa fa-plus-square"></i>Detail</button>
+                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -445,10 +237,13 @@
                                         <div class="product-image-wrapper">
                                             <div class="single-products">
                                                 <div class="productinfo text-center">
-                                                    <img src="{{ URL::asset('assets/images/home/recommend1.jpg') }}" alt="" />
+                                                    <img src="{{ URL::asset('assets/images/home/MSKB_01.jpg') }}" alt="" />
                                                     <h2>$56</h2>
                                                     <p>Easy Polo Black Edition</p>
-                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</button>
+                                                    <a href="{{ URL::asset('user/detail') }}">
+                                                     <button type="button" class="btn btn-default add-to-cart"><i class="fa fa fa-plus-square"></i>Detail</button>
+                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -457,10 +252,13 @@
                                         <div class="product-image-wrapper">
                                             <div class="single-products">
                                                 <div class="productinfo text-center">
-                                                    <img src="{{ URL::asset('assets/images/home/recommend2.jpg') }}" alt="" />
+                                                    <img src="{{ URL::asset('assets/images/home/RMA_01.jpg') }}" alt="" />
                                                     <h2>$56</h2>
                                                     <p>Easy Polo Black Edition</p>
-                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</button>
+                                                    <a href="{{ URL::asset('user/detail') }}">
+                                                     <button type="button" class="btn btn-default add-to-cart"><i class="fa fa fa-plus-square"></i>Detail</button>
+                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -469,10 +267,13 @@
                                         <div class="product-image-wrapper">
                                             <div class="single-products">
                                                 <div class="productinfo text-center">
-                                                    <img src="{{ URL::asset('assets/images/home/recommend3.jpg') }}" alt="" />
+                                                    <img src="{{ URL::asset('assets/images/home/GKT_02.jpg') }}" alt="" />
                                                     <h2>$56</h2>
                                                     <p>Easy Polo Black Edition</p>
-                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</button>
+                                                    <a href="{{ URL::asset('user/detail') }}">
+                                                     <button type="button" class="btn btn-default add-to-cart"><i class="fa fa fa-plus-square"></i>Detail</button>
+                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -486,101 +287,10 @@
                                 <i class="fa fa-angle-right"></i>
                               </a>          
                         </div>
-                    </div><!--/recommended_items-->
+          </div>
                     
                 </div>
             </div>
         </div>
     </section>
-@endsection
-@section('menu')
-    <div class="header-middle"><!--header-middle-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="logo pull-left">
-                            <a href="index.html"><img src="{{ URL::asset('assets/images/home/logo.png') }}" alt="" /></a>
-                        </div>
-                        <div class="btn-group pull-right">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    USA
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Canada</a></li>
-                                    <li><a href="#">UK</a></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    DOLLAR
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Canadian Dollar</a></li>
-                                    <li><a href="#">Pound</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="shop-menu pull-right">
-                            <ul class="nav navbar-nav">
-                                <li><a href="#" ><i class="fa fa-user"></i> Account</a></li>
-                                <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                <li><a href="{{ URL::asset('user/checkout') }}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="{{ URL::asset('user/cart') }}" ><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <li><a href="{{ URL::asset('user/account') }}"><i class="fa fa-lock"></i> Login</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!--/header-middle-->
-    
-        <div class="header-bottom"><!--header-bottom-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-9">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="mainmenu pull-left">
-                            <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="{{ URL::asset('user/') }}">Home</a></li>
-                                <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-                                        <li><a href="{{ URL::asset('user/detail') }}" class="active">Product Details</a></li> 
-                                        <li><a href="{{ URL::asset('user/checkout') }}"  >Checkout</a></li> 
-                                        <li><a href="{{ URL::asset('user/cart') }}">Cart</a></li> 
-                                        <li><a href="{{ URL::asset('user/account') }}">Login</a></li> 
-                                <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Blog List</a></li>
-                                        <li><a href="blog-single.html">Blog Single</a></li>
-                                    </ul>
-                                </li> 
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="{{ URL::asset('user/contact') }}">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="search_box pull-right">
-                            <input type="text" placeholder="Search"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!--/header-bottom-->
-@endsection
-@section('scripts')
 @endsection

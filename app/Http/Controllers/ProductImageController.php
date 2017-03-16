@@ -12,10 +12,10 @@ class ProductImageController extends Controller
 {
     public function index(){
         
+        $data['productimage'] = ProductImage::all();
+        $data['navigation'] = 'productimage';
+        return view('admin.partials.productimage', $data);
 
-        $productimage = ProductImage::all();
-        return view('admin.partials.productimage')
-            ->with('productimage', $productimage);
     }  
      public function create()
     {
@@ -37,6 +37,65 @@ class ProductImageController extends Controller
 
         // redirect
         Session::flash('message', 'Successfully created nerd!');
+        return Redirect::to('admin/productimage');
+    }
+  public function edit($id)
+
+    {
+        $productimage  = ProductImage::find($id);
+        if (!$productimage)
+        {
+            Redirect::to(url('admin/productimage'));
+        }
+
+        $data['productimage'] = $productimage;
+
+
+        return view('admin.partials.productimage-edit', $data);
+
+    }
+
+     public function update(Request $request, $id)
+
+    {
+        $productimage  =  ProductImage::find($id);
+        if (!$productimage)
+        {
+            Redirect::to(url('admin/productimage'));
+        }
+
+        $rules = array(
+            'product_id'       => 'required',
+            'image'      => 'required',
+        
+        );
+
+        $this->validate($request, $rules);
+        $productimage->product_id = $request->input('product_id');
+        $productimage->image = $request->input('image');
+        $productimage->update();
+
+        // redirect
+        Session::flash('message', 'Successfully Update!');
+        return Redirect::to('admin/productimage');
+
+    }
+
+        public function confirmation($id){
+       $data['productimage']  = ProductImage::find($id);;
+       $data['name'] = 'productimage';
+        return view('admin.partials.productimage-delete', $data);
+    }  
+
+
+       public function destroy($id)
+    {
+        // delete
+        $productimage = ProductImage::find($id);
+        $productimage->delete();
+
+        // redirect
+        Session::flash('message', 'Successfully deleted!');
         return Redirect::to('admin/productimage');
     }
 

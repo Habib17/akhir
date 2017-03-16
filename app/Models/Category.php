@@ -14,4 +14,9 @@ class Category extends Model
   	protected $dates = ['deleted_at'];
   	protected $guarded = array('created_at', 'updated_at', 'deleted_at');
 
+  	public function parent()
+    {
+        return $this->belongsTo('App\Models\Category', 'id', 'parent_id');
+    }
+
 }
