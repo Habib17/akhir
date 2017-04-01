@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('image-upload','ImageController@imageUpload');
+Route::get('image-view','ImageController@imageView');
+Route::post('image-upload','ImageController@imageUploadPost');
 Route::group(['middleware' => 'web'], function () {
    Route::auth();
    Route::get('/home', 'LatihanLoginController@index');
@@ -119,4 +123,4 @@ Route::group(['prefix' => 'service'], function () {
 
 
 
-Route::get('/home', 'HomeController@index');
+// Route::get('/home', 'HomeController@index');

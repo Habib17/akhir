@@ -43,7 +43,7 @@
             </li>
             <li class="{{ isset($navigation) && $navigation == 'product' ? 'active' : ''}}">
                 <a href="{{ URL::asset('admin/product') }}">
-                     <i class="fa fa-database"></i> <span>product</span>
+                     <i class="fa fa-database"></i> <span>Product</span>
                 </a>
             </li>
              <li class="{{ isset($navigation) && $navigation == 'paymentmethod' ? 'active' : ''}}">

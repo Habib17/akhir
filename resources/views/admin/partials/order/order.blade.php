@@ -5,7 +5,7 @@
             <div class="col-xs-12">
 <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Data Table With Full Features</h3>
+                 <h3 class="box-title">{{$title}}</h3>
                   <a href=" {{ URL::asset('admin/orders/create') }}" class="btn btn-success pull-right"><i class="fa fa-fw fa-plus" ></i>Tambah</a>
                 </div><!-- /.box-header -->
                    <div class="box-body">

@@ -6,20 +6,20 @@ use App\Models\Category;
 use Validator;
 use Redirect;
 use Session;
-
 class CategoryController extends Controller
 {
-    public function index(){
-        
+    public function index(){    
         $data['category'] = Category::all();
         $data['navigation'] = 'category';
-        return view('admin.partials.category', $data);
+        $data['title'] = 'Category List';
+
+        return view('admin.partials.category.category', $data);
     }  
 
      public function confirmation($id){
        $data['category']  = Category::find($id);;
        $data['name'] = 'Category';
-        return view('admin.partials.category-delete', $data);
+        return view('admin.partials.category.category-delete', $data);
     }  
 
 
@@ -27,7 +27,7 @@ class CategoryController extends Controller
     public function create()
     {
         $data['categories'] = Category::all();
-        return view('admin.partials.category-create', $data);
+        return view('admin.partials.category.category-create', $data);
     }
 
     public function store(Request $request)
@@ -45,8 +45,8 @@ class CategoryController extends Controller
 		$category->save();
 
         // redirect
-        Session::flash('message', 'Successfully created');
-        return Redirect::to('admin/category');
+        //Session::flash('message', 'Successfully created');
+        return Redirect::to('admin/category')->with('success', "The Category <strong>$category->name</strong> has successfully been created.");
     }
 
      public function edit($id)
@@ -63,7 +63,7 @@ class CategoryController extends Controller
         $data['categories'] = $categories;
 
 
-        return view('admin.partials.category-edit', $data);
+        return view('admin.partials.category.category-edit', $data);
 
     }
 
@@ -89,7 +89,7 @@ class CategoryController extends Controller
 
         // redirect
         Session::flash('message', 'Successfully Update!');
-        return Redirect::to('admin/category');
+        return Redirect::to('admin/category')->with('info', "The Category <strong>$category->name</strong> has successfully been updated.");
 
     }
 

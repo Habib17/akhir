@@ -19,7 +19,13 @@
     </div>
 @endif
 
-
+@if ($message = Session::get('success'))
+    <div class="alert alert-success alert-block">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>{{ $message }}</strong>
+    </div>
+    <img src="/images/{{ Session::get('path') }}">
+    @endif
                   <div class="box-body">
                     <div class="form-group">
                         <label  class="col-sm-2 control-label">Product Id</label>

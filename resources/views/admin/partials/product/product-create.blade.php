@@ -8,7 +8,7 @@
                   <h3 class="box-title">Horizontal Form</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-  <form class="form-horizontal"  method="post">
+  <form class="form-horizontal"  method="post" enctype="multipart/form-data">
     @if (count($errors) > 0) 
     <div class="alert alert-danger">
         <ul>
@@ -20,31 +20,19 @@
 @endif
                 <div class="box-body">
                     <div class="form-group">
+                        <label  class="col-sm-2 control-label">Code</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" name="code"  type="text" placeholder="Code">
+                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                    </div>
+                    </div>
+                    <div class="form-group">
                         <label  class="col-sm-2 control-label">Name</label>
                     <div class="col-sm-10">
                         <input class="form-control" name="name"  type="text" placeholder="Name">
                     </div>
                     </div>
-                    <div class="form-group">
-                        <label  class="col-sm-2 control-label">Deskription</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" name="deskription"  type="text" placeholder="Deskription">
-                    </div>
-                    </div>
-                    <div class="form-group">
-                        <label  class="col-sm-2 control-label">Price</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" name="price"  type="text" placeholder="Price">
-                    </div>
-                    </div>
-                    <div class="form-group">
-                        <label  class="col-sm-2 control-label">Qty</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" name="qty"  type="text" 
-                        placeholder="Qty">
-                    </div>
-                    </div>
-                    <div class="form-group">
+                     <div class="form-group">
                         <label  class="col-sm-2 control-label">Category</label>
                         <div class="col-sm-10">
                             <select name="category_id">
@@ -55,13 +43,39 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label  class="col-sm-2 control-label">Code</label>
+                     <div class="form-group">
+                        <label  class="col-sm-2 control-label">Qty</label>
                     <div class="col-sm-10">
-                        <input class="form-control" name="code"  type="text" placeholder="Code">
-                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                        <input class="form-control" name="qty"  type="text" 
+                        placeholder="Qty">
                     </div>
                     </div>
+                      <div class="form-group">
+                        <label  class="col-sm-2 control-label">Price</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" name="price"  type="text" placeholder="Price">
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">Deskription</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" name="deskription"  type="text" placeholder="Deskription">
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">Image</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" name="image" id="image" onchange="loadFile(event)">
+                    </div>
+                    </div>
+                     <div class="form-group">
+                     <label  class="col-sm-2 control-label">Picture</label>
+                    <div class="col-sm-10">
+                        <img id="image_pic" height="100" width="100"/>
+                    </div>
+                    </div>
+
+
                   </div><!-- /.box-body -->
                   <div class="box-footer">
                     <button type="submit" class="btn btn-default">Cancel</button>

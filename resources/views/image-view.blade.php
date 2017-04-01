@@ -5,7 +5,7 @@
             <div class="col-xs-12">
 <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Data Table With Full Features</h3>
+                  <h3 class="box-title"></h3>
                   <a href=" {{ URL::asset('admin/category/create') }}" class="btn btn-success pull-right"><i class="fa fa-fw fa-plus" ></i>Tambah</a>
                 </div><!-- /.box-header -->
                 <div class="box-body">
@@ -14,22 +14,20 @@
                       <tr>
                        <th>ID</th>
                        <th>Name</th>
-                        <th>Parent ID</th>
-                        <th>Slug</th>
-                        <th>Actions</th>
+                        <th>Product ID</th>
+                         <th>Image</th>
+                       
 
                       </tr>
                     </thead>
                     <tbody>
-                        @foreach($category as $key => $value)
+                        @foreach($image as $key => $value)
                       <tr>
                         <td>{{ $value->id }}</td>
-                        <td>{{ $value->name }}</td>
-                        @if ( $getParent = $value->parent()->get() )
-                        <td>{{ isset($getParent->name) ? $getParent->name : '-' }}</td>
-                        @endif
+                        <td>{{ $value->product_id }}</td>
+                        <td>{{ $value->image }}
+                        </td>
                         <td>
-              <a href="{{ URL::asset('admin/category/edit/'. $value->id) }}" class="btn btn-small btn-info">Edit</a>| <a href="{{ URL::asset('admin/category/confirm/'. $value->id) }}" class="btn btn-small btn-danger delete">Hapus</a>
             </td>
         </tr>
     @endforeach

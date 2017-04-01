@@ -1,5 +1,4 @@
 @extends('user.layouts.master')
-@section('title','Goldia Cemilan')
 @section('content')
 <section id="form"><!--form-->
         <div class="container">
@@ -24,27 +23,9 @@
                             <input type="text" name="phone" placeholder="Nomor Telepon"/>
                             </div>
                             
-                            <div class="col-sm-12">
-                           <select id="province_id" name="province_id" onchange="changeCity();"/>
-                            @foreach ($provinces as $province)
-                                <option value="{{ $province->id }}">{{ $province->name }}</option>
-                            @endforeach
-                                </select>
-                            </div>
+                            
 
-                            <div class="col-sm-12">
-                            <select  id="city_id" 
-                            name="city_id" onchange="changeDistrict();"/>
-                                </select>
-                            </div>
-                             <div class="col-sm-12">
-                            <select id="district_id" 
-                            name="district_id"/></select>
-                             
-                            </div>
-                            <div class="col-sm-12">
-                            <input type="text" placeholder="kodepost"
-                            name="postalcode"/>
+                            
                             </div>
                             <div class="col-sm-12">
                             <div class="btn-group" data-toggle="buttons"></div>

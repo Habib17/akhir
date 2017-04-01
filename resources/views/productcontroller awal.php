@@ -9,7 +9,6 @@ use App\Models\ProductImage;
 use Validator;
 use Redirect;
 use Session;
-use Image;
 
 class ProductController extends Controller
 {
@@ -57,24 +56,8 @@ class ProductController extends Controller
         $product->category_id = $request->input('category_id');
         $product->price = $request->input('price');
         $product->qty = $request->input('qty');
-        
-        $file = $request->file('image');
+        $product->update();
 
-            if($file != ""){
-                $ext = $file->getClientOriginalExtension();
-                $fileName = rand(10000, 50000) . '.' .$ext;
-                $image = Image::make($request->file('image'));
-                $image->resize(120, 120);
-                if ( $image->save(base_path().'/public/uploads/'. $fileName) )
-                {
-                    $product->image = $fileName;
-                }
-                //$path = public_path('uploads/' . $fileName);
-                //Image::make($file->getRealPath())->resize(120, 120)->save($path);
-            }
-
-
-        
         // redirect
       //  Session::flash('success', 'Successfully Update!');
        
@@ -102,7 +85,7 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-    	$rules = array(
+        $rules = array(
             'name'       => 'required',
             'deskription'      => 'required',
             'code'      => 'required',
@@ -114,30 +97,21 @@ class ProductController extends Controller
 
         $this->validate($request, $rules);
 
-		$product = new Product;
-		$product->name = $request->input('name');
-		$product->deskription = $request->input('deskription');
-		$product->code = $request->input('code');
+        $product = new Product;
+        $product->name = $request->input('name');
+        $product->deskription = $request->input('deskription');
+        $product->code = $request->input('code');
         $product->category_id = $request->input('category_id');
         $product->price = $request->input('price');
         $product->qty = $request->input('qty');
-        $file = $request->file('image');
-
-            if($file != ""){
-                $ext = $file->getClientOriginalExtension();
-                $fileName = rand(10000, 50000) . '.' .$ext;
-                $image = Image::make($request->file('image'));
-                $image->resize(120, 120);
-                if ( $image->save(base_path().'/public/uploads/'. $fileName) )
-                {
-                    $product->image = $fileName;
-                }
-                //$path = public_path('uploads/' . $fileName);
-                //Image::make($file->getRealPath())->resize(120, 120)->save($path);
-            }
-
+        $productimage = new ProductImage;
+        $imageName = time().'.'.$request->image->getClientOriginalExtension();
+        $request->image->move(public_path('images'), $imageName);
+        $productimage = new ProductImage;
+        $productimage->image =$imageName;
         $product->save();
-
+        $productimage->product_id = $product->id;
+        $productimage->save();
 
         // redirect
         // Session::flash('message', 'Successfully created nerd!');

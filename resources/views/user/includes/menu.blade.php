@@ -30,14 +30,14 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                  <li><a href="{{ URL::asset('user/') }}">Home</a></li>
+                                  <li><a href="{{ URL::asset('user/') }}"  class="{{ isset($navigation) && $navigation == 'home' ? 'active' : ''}}" >Home</a></li>
                                 <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-                                        <li><a href="{{ URL::asset('user/detail') }}">Product Details</a></li> 
-                                        <li><a href="{{ URL::asset('user/checkout') }}">Checkout</a></li> 
-                                        <li><a href="{{ URL::asset('user/cart') }}">Cart</a></li> 
-                                        <li><a href="{{ URL::asset('user/account') }}" class="active">Login</a></li> 
+                                        <li><a href="shop.html"  class="{{ isset($navigation) && $navigation == 'product' ? 'active' : ''}}">Products</a></li>
+                                        <li><a href="{{ URL::asset('user/detail') }}"  class="{{ isset($navigation) && $navigation == 'detail' ? 'active' : ''}}">Product Details</a></li> 
+                                        <li><a href="{{ URL::asset('user/checkout') }}" class="{{ isset($navigation) && $navigation == 'checkout' ? 'active' : ''}}">Checkout</a></li> 
+                                        <li><a href="{{ URL::asset('user/cart') }}"  class="{{ isset($navigation) && $navigation == 'cart' ? 'active' : ''}}">Cart</a></li> 
+                                        <li><a href="{{ URL::asset('user/account') }}"  class="{{ isset($navigation) && $navigation == 'account' ? 'active' : ''}}">Login</a></li> 
                                     </ul>
                                 </li> 
                                 <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>

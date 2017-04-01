@@ -5,7 +5,8 @@ use App\Models\ProductImage;
 use Validator;
 use Redirect;
 use Session;
-
+use App\Http\Requests;
+use Image;
 
 
 class ProductImageController extends Controller
@@ -25,17 +26,22 @@ class ProductImageController extends Controller
     {
     	$rules = array(
             'product_id'       => 'required',
-            'image'      => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         );
 
         $this->validate($request, $rules);
 
 		$productimage = new Productimage;
 		$productimage->product_id = $request->input('product_id');
-		$productimage->image = $request->input('image');
-		$productimage->save();
+	    $imageName = time().'.'.$request->image->getClientOriginalExtension();
+        $request->image->move(public_path('images'), $imageName);
+        $productimage = new ProductImage;
+        $productimage->image =$imageName;
+        $productimage->save();
 
         // redirect
+        
+
         Session::flash('message', 'Successfully created nerd!');
         return Redirect::to('admin/productimage');
     }

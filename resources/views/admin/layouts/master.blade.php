@@ -10,6 +10,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
+    @include('admin.includes.alert')
    @yield('content')
         <!-- /.content -->
     </div>

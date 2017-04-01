@@ -1,5 +1,6 @@
 <?php 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\Models\Orders;
 use App\Models\Province;
@@ -18,7 +19,8 @@ class OrdersController extends Controller
     public function index(){
         $data['orders'] = Orders::all();
         $data['navigation'] = 'orders';
-        return view('admin.partials.order', $data);
+        $data['title'] = 'Order List';
+        return view('admin.partials.order.order', $data);
 
 
     }  
@@ -28,7 +30,7 @@ class OrdersController extends Controller
     	$data['provinces'] = Province::all();
     	$data['paymentmethods'] = PaymentMethod::all();
     	$data['orderstatuss'] = OrderStatus::all();
-        return view('admin.partials.order-create', $data);
+        return view('admin.partials.order.order-create', $data);
     }
 
   public function store(Request $request)
@@ -77,14 +79,14 @@ class OrdersController extends Controller
 		$orders->save();
 
         // redirect
-        Session::flash('message', 'Successfully created');
-        return Redirect::to('admin/orders');
+        //Session::flash('message', 'Successfully created');
+        return Redirect::to('admin/orders')->with('success', "The Order <strong>$order->name</strong> has successfully been created.");
     }
 
        public function confirmation($id){
        $data['orders']  = Orders::find($id);;
        $data['name'] = 'orders';
-        return view('admin.partials.order-delete', $data);
+        return view('admin.partials.order.order-delete', $data);
     }  
 
 
@@ -115,7 +117,7 @@ class OrdersController extends Controller
         $data['district'] = District::all();
         $data['paymentmethods'] = PaymentMethod::all();
         $data['orderstatuss'] = OrderStatus::all();
-        return view('admin.partials.order-edit', $data);
+        return view('admin.partials.order.order-edit', $data);
 
     }
 
@@ -167,8 +169,8 @@ class OrdersController extends Controller
         $orders->update();
 
         // redirect
-        Session::flash('message', 'Successfully Update!');
-        return Redirect::to('admin/orders');
+        //Session::flash('message', 'Successfully Update!');
+        return Redirect::to('admin/orders')->with('info', "The Order <strong>$order->name</strong> has successfully been updated.");
 
     }
 }

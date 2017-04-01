@@ -52,6 +52,15 @@
         });
     }
     </script>
-
+<script>
+    function loadFile(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+            var output = document.getElementById('image_pic');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
 
 

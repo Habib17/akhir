@@ -10,6 +10,11 @@ class ShippingController extends Controller
 {
     public function index(){
           // return view('user.partials.home');
-           return view('user.partials.shipping');
+
+    	$data['navigation'] = 'shipping';
+        $data['title'] = 'Cara Package';
+
+ 
+           return view('user.partials.shipping', $data);
     }  
 }
